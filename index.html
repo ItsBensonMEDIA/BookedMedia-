@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Media Book</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎬</text></svg>">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg: #ffffff;
+    --text: #0f0f0f;
+    --text-muted: #6b6b6b;
+    --border: #e5e5e5;
+    --surface: #f7f7f7;
+    --radius: 10px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0f0f0f;
+      --text: #f0f0f0;
+      --text-muted: #888;
+      --border: #222;
+      --surface: #1a1a1a;
+    }
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+
+  nav { display: flex; justify-content: space-between; align-items: center; padding: 1.25rem 2rem; border-bottom: 1px solid var(--border); position: sticky; top: 0; background: var(--bg); z-index: 10; }
+  .nav-logo { font-size: 17px; font-weight: 600; letter-spacing: -0.3px; }
+  .nav-cta { background: var(--text); color: var(--bg); border: none; padding: 9px 20px; border-radius: var(--radius); font-size: 13px; font-weight: 500; cursor: pointer; text-decoration: none; }
+
+  .hero { padding: 6rem 2rem 5rem; text-align: center; border-bottom: 1px solid var(--border); max-width: 700px; margin: 0 auto; }
+  .hero-eyebrow { font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1.25rem; }
+  .hero-title { font-size: clamp(32px, 6vw, 52px); font-weight: 600; line-height: 1.1; letter-spacing: -1px; margin-bottom: 1.25rem; }
+  .hero-title span { color: var(--text-muted); }
+  .hero-sub { font-size: 17px; color: var(--text-muted); max-width: 440px; margin: 0 auto 2.5rem; line-height: 1.65; }
+  .hero-btn { display: inline-block; background: var(--text); color: var(--bg); padding: 13px 30px; border-radius: var(--radius); font-size: 15px; font-weight: 500; text-decoration: none; }
+
+  section { max-width: 900px; margin: 0 auto; padding: 4rem 2rem; border-bottom: 1px solid var(--border); }
+  .section-label { font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 2rem; }
+
+  .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+  .service-card { background: var(--bg); padding: 1.75rem 1.5rem; }
+  .service-icon { font-size: 24px; margin-bottom: 1rem; }
+  .service-title { font-size: 15px; font-weight: 600; margin-bottom: 0.4rem; }
+  .service-desc { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
+
+  .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; }
+  .stat-card { background: var(--surface); border-radius: 12px; padding: 1.5rem; }
+  .stat-num { font-size: 30px; font-weight: 600; letter-spacing: -1px; margin-bottom: 0.4rem; }
+  .stat-label { font-size: 13px; color: var(--text-muted); line-height: 1.5; }
+
+  .contact-section { text-align: center; border-bottom: none; }
+  .contact-title { font-size: 32px; font-weight: 600; letter-spacing: -0.5px; margin-bottom: 0.75rem; }
+  .contact-sub { font-size: 16px; color: var(--text-muted); margin-bottom: 2rem; }
+  .contact-btn { display: inline-block; background: var(--text); color: var(--bg); padding: 14px 34px; border-radius: var(--radius); font-size: 15px; font-weight: 500; text-decoration: none; }
+
+  footer { padding: 1.5rem 2rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; max-width: 900px; margin: 0 auto; }
+  .footer-copy { font-size: 12px; color: var(--text-muted); }
+
+  @media (max-width: 600px) {
+    nav { padding: 1rem 1.25rem; }
+    .hero { padding: 4rem 1.25rem 3rem; }
+    section { padding: 3rem 1.25rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">Media Book</div>
+  <a class="nav-cta" href="#contact">Get in touch</a>
+</nav>
+
+<div style="max-width:700px;margin:0 auto;">
+  <div class="hero">
+    <div class="hero-eyebrow">Social media &amp; video</div>
+    <h1 class="hero-title">Content that makes<br><span>people stop scrolling.</span></h1>
+    <p class="hero-sub">We help small businesses grow their audience with short-form video content that actually converts.</p>
+    <a class="hero-btn" href="#contact">Work with us</a>
+  </div>
+</div>
+
+<section>
+  <div class="section-label">What we do</div>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-icon">🎬</div>
+      <div class="service-title">Video editing</div>
+      <div class="service-desc">Professional short-form video editing for Instagram Reels, TikTok and YouTube Shorts.</div>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🎨</div>
+      <div class="service-title">Colour grading</div>
+      <div class="service-desc">Cinematic colour grading that gives your content a consistent, polished look.</div>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🖼️</div>
+      <div class="service-title">Thumbnails &amp; graphics</div>
+      <div class="service-desc">Eye-catching thumbnails and graphics designed to maximise clicks and views.</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="section-label">Why Media Book</div>
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="stat-num">28k+</div>
+      <div class="stat-label">Subscribers grown on our own channel — we practise what we preach.</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">7M</div>
+      <div class="stat-label">Views on a single piece of short-form content we produced.</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">Monthly</div>
+      <div class="stat-label">Retainer model — consistent content, no surprises.</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">Sydney</div>
+      <div class="stat-label">Based locally, working with businesses across Sydney and beyond.</div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact-section">
+  <div class="contact-title">Ready to grow?</div>
+  <div class="contact-sub">Send us a message and we'll get back to you within 24 hours.</div>
+  <a class="contact-btn" href="mailto:itsbenson.ugc@gmail.com">itsbenson.ugc@gmail.com</a>
+</section>
+
+<footer>
+  <div class="footer-copy">© 2026 Media Book</div>
+  <div class="footer-copy">Sydney, NSW</div>
+</footer>
+
+</body>
+</html>
